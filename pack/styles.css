@@ -253,40 +253,42 @@ section.block.alt { background: var(--soft); }
 .glossary-list {
   display: grid;
   grid-template-columns: minmax(180px, 220px) 1fr;
-  gap: 10px 24px;
+  column-gap: 0;
+  row-gap: 0;
   margin: 0 0 12px 0;
   font-size: 14px;
 }
 .glossary-list dt {
   color: var(--c-navy);
   line-height: 1.5;
-  padding-top: 2px;
+  padding: 14px 24px 14px 0;
+  border-bottom: 1px solid var(--border);
 }
 .glossary-list dd {
   color: var(--text);
   line-height: 1.55;
   margin: 0;
-  padding-bottom: 12px;
+  padding: 14px 0;
   border-bottom: 1px solid var(--border);
 }
-.glossary-list dt:not(:first-of-type) {
-  padding-top: 14px;
-  border-top: 1px solid var(--border);
-}
+.glossary-list dt:first-of-type,
 .glossary-list dt:first-of-type + dd {
-  /* keep the first definition flush with its term */
+  padding-top: 4px;
 }
 @media (max-width: 760px) {
   .glossary-list {
     grid-template-columns: 1fr;
-    gap: 4px;
   }
-  .glossary-list dt:not(:first-of-type) {
-    padding-top: 14px;
-    margin-top: 0;
+  .glossary-list dt {
+    padding: 14px 0 4px 0;
+    border-bottom: none;
   }
   .glossary-list dd {
-    padding-bottom: 14px;
+    padding: 0 0 14px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .glossary-list dt:first-of-type {
+    padding-top: 4px;
   }
 }
 .shape-card-body p {
