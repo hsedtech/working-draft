@@ -457,9 +457,9 @@ ul.evidence li strong { color: var(--c-navy); }
 .evidence-row .evidence-detail li { margin-bottom: 4px; }
 .evidence-row .evidence-detail table { font-size: 13px; }
 
-/* Working-draft pill — fixed corner badge, sits below the sticky topbar */
+/* Working-draft pill — fixed corner badge, sits below the sticky topbar with breathing room */
 .ribbon {
-  position: fixed; top: 76px; right: 14px;
+  position: fixed; top: 96px; right: 18px;
   background: var(--magenta); color: white;
   font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
   padding: 6px 12px; border-radius: 999px;
@@ -468,5 +468,5 @@ ul.evidence li strong { color: var(--c-navy); }
   white-space: nowrap;
 }
 @media (max-width: 760px) {
-  .ribbon { font-size: 9px; padding: 5px 10px; top: 64px; right: 10px; }
+  .ribbon { font-size: 9px; padding: 5px 10px; top: 80px; right: 12px; }
 }
