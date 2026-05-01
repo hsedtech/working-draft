@@ -457,16 +457,17 @@ ul.evidence li strong { color: var(--c-navy); }
 .evidence-row .evidence-detail li { margin-bottom: 4px; }
 .evidence-row .evidence-detail table { font-size: 13px; }
 
-/* Working-draft pill — fixed corner badge, sits below the sticky topbar with breathing room */
+/* Working-draft pill — fixed corner badge, anchored ABOVE the sticky topbar so it
+   never gets clipped when the nav wraps to a second line on narrower viewports */
 .ribbon {
-  position: fixed; top: 96px; right: 18px;
+  position: fixed; top: 12px; right: 18px;
   background: var(--magenta); color: white;
   font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
   padding: 6px 12px; border-radius: 999px;
   box-shadow: 0 4px 12px rgba(230, 0, 126, 0.35);
-  z-index: 94; pointer-events: none;
+  z-index: 96; pointer-events: none;
   white-space: nowrap;
 }
 @media (max-width: 760px) {
-  .ribbon { font-size: 9px; padding: 5px 10px; top: 80px; right: 12px; }
+  .ribbon { font-size: 9px; padding: 5px 10px; top: 8px; right: 12px; }
 }
